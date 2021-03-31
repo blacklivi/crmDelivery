@@ -34,20 +34,20 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
-      height="70"
-      prominent
+      max-height="64"
     >
 
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-spacer></v-spacer>
 
-      <div>
+      <div class="mt-1">
         <a href="#" class="delete-item glo" @click.prevent="logout">Logout</a>
       </div>
     </v-app-bar>
+    <v-divider />
     <v-main>
-      <v-container>
+      <v-container class="container--fluid px-0 py-0">
         <nuxt />
       </v-container>
     </v-main>
@@ -84,7 +84,7 @@ export default {
 
 a.glo {
   color: #00c6ff;
-  padding: 15px 20px;
+  padding: 8px 0;
   text-transform: uppercase;
   width: 150px;
   text-decoration: none;
@@ -94,7 +94,7 @@ a.glo {
   background-position: 100% 0;
   background-size: 200% 100%;
   transition: all .25s ease-in;
-  font: 400 18px tahoma;
+  font: 400 15px tahoma;
   border: 1px solid #00C6FF;
 }
 

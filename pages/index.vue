@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <div>
     <div
       v-if="subarray.length > 0"
     >
     </div>
-    <div class="container">
+    <div>
       <table>
         <caption>User table</caption>
         <thead>
