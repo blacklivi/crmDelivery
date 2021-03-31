@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="blocks_test">
-      <v-row class="blocks blocks_one">
+      <v-row class="blocks blocks_one ml-auto mr-auto">
         <v-col cols="3">
           <v-img
             height="100%"
@@ -76,7 +76,7 @@
               >
                 <div>
                   <v-btn
-                    class="btn_social mr-2"
+                    class="mb-9 mr-2"
                     color="secondary"
                     elevation="3"
                     icon
@@ -87,7 +87,7 @@
 
                   <v-btn
                     color="secondary"
-                    class="btn_social mr-2"
+                    class="mb-9 mr-2"
                     elevation="3"
                     icon
                     x-small
@@ -97,7 +97,7 @@
 
                   <v-btn
                     color="secondary"
-                    class="btn_social mr-2"
+                    class="mb-9 mr-2"
                     elevation="3"
                     icon
                     x-small
@@ -107,7 +107,7 @@
 
                   <v-btn
                     color="secondary"
-                    class="btn_social mr-2"
+                    class="mb-9 mr-2"
                     elevation="3"
                     icon
                     x-small
@@ -117,7 +117,7 @@
 
                   <v-btn
                     color="secondary"
-                    class="btn_social"
+                    class="mb-9"
                     elevation="3"
                     icon
                     x-small
@@ -133,7 +133,9 @@
                     rounded
                     small
                   >
-                    <v-icon class="mr-1">mdi-email</v-icon>
+                    <v-icon class="mr-1">
+                      mdi-email
+                    </v-icon>
                     send message
                   </v-btn>
                 </div>
@@ -145,13 +147,18 @@
                   Cheerful resident in this wonderful world.
                 </div>
                 <div>
-                  Minsk, Belarus
+                  <v-icon
+                    dense
+                  >
+                    mdi-apple-safari
+                  </v-icon>
+                  <span>Minsk, Belarus</span>
                 </div>
               </div>
             </v-col>
             <v-col cols="12">
               <div
-                class="block ml-auto"
+                class="block d-flex ml-auto"
               >
                 <div class="block_follower mr-1">
                   <h4>440</h4>
@@ -162,7 +169,7 @@
                   <p>following</p>
                 </div>
                 <div
-                  class="block_follow ml-1"
+                  class="block_follow pt-2 ml-1"
                 >
                   <h2>+ Follow</h2>
                 </div>
@@ -173,51 +180,66 @@
       </v-row>
     </div>
     <v-divider class="separator"/>
-    <v-row class="blocks">
+    <v-row class="blocks ml-auto mr-auto mt-5">
       <v-col cols="3">
-        <h4>My Core Skills:</h4>
+        <h4 class="mt-2">My Core Skills:</h4>
       </v-col>
-      <v-col cols="3">
-        <button class="rating">
+      <v-col cols="3 d-flex">
+        <v-btn
+          class="rating"
+          text
+          rounded
+          color="orange"
+        >
           <h4>Inbound marketing</h4>
           <v-rating
+            class="mb-1"
             readonly
             hover
             dense
             length="3"
             size="15"
             value="3"
+            color="black"
           />
-        </button>
-      </v-col>
-      <v-col cols="3">
-        <button class="rating">
+        </v-btn>
+        <v-btn
+          text
+          rounded
+          color="orange"
+        >
           <h4>Cool marketing</h4>
           <v-rating
+            class="mb-1"
             readonly
             hover
             dense
             length="2"
             size="15"
             value="2"
+            color="black"
           />
-        </button>
-      </v-col>
-      <v-col cols="3">
-        <button class="rating">
+        </v-btn>
+        <v-btn
+          text
+          rounded
+          color="orange"
+        >
           <h4>Growth marketing</h4>
           <v-rating
+            class="mb-1"
             readonly
             hover
             dense
             length="1"
             size="15"
             value="1"
+            color="black"
           />
-        </button>
+        </v-btn>
       </v-col>
     </v-row>
-    <v-row class="blocks">
+    <v-row class="blocks ml-auto mr-auto mt-5">
       <v-col cols="8">
         <div>
           <div class="d-flex">
@@ -267,23 +289,16 @@ export default {
 
 <style lang="scss" scoped>
 .blocks_test {
-  height: 321px;
+  height: 300px;
   width: 100%;
   background-color: #e8f6fa;
-  padding-top: 28px;
 }
 
 .blocks {
   width: 90%;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
 }
 
 .block {
-  display: flex;
   justify-content: flex-end;
 
   .block_follower {
@@ -291,7 +306,6 @@ export default {
     height: 50px;
     border: 1px solid #e0e0e0;
     text-align: center;
-    padding-top: 5px;
     background-color: #ffffff;
     border-radius: 50px;
     cursor: pointer;
@@ -302,7 +316,6 @@ export default {
     height: 50px;
     border: 1px solid #e0e0e0;
     text-align: center;
-    padding-top: 10px;
     background-color: #3aabf5;
     color: white;
     border-radius: 50px;
@@ -311,33 +324,12 @@ export default {
 }
 
 .rating {
-  display: flex;
-  padding: 3px;
-  cursor: pointer;
-  user-select: none;
-  border: none;
-  outline: none;
-  transition: background 5s;
-  border-radius: 3px;
-}
-
-.rating:active {
-  background: #ff0000;
-  transition: background 0s;
-  border-radius: 3px;
+  color: white;
 }
 
 .btn_skill {
   border: 1px orange solid;
   background-color: white;
-}
-
-.btn_social {
-  margin-bottom: 35px;
-}
-
-li {
-  list-style-type: none;
 }
 
 </style>
